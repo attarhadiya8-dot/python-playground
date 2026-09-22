@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
   const [showVariables, setShowVariables] = useState(false);
 
   const [code, setCode] = useState("");
@@ -95,15 +97,19 @@ function Home() {
           </div>
 
           <div
-            style={{
-              backgroundColor: "#ffe6f5",
-              padding: "20px",
-              borderRadius: "20px",
-              color: "#ff4fa3",
-            }}
-          >
-            Loops 🌸
-          </div>
+  onClick={() => navigate("/loops")}
+  style={{
+    backgroundColor: "#ffe6f5",
+    padding: "20px",
+    borderRadius: "20px",
+    color: "#ff4fa3",
+    cursor: "pointer",
+    transition: "0.3s",
+    fontSize: "20px",
+  }}
+>
+  Loops 🌸
+</div>
 
           <div
             style={{
